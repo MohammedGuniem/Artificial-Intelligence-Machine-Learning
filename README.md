@@ -30,4 +30,5 @@ This repository includes a series of notebooks with the purpose of learning and 
   <br/>
       jupyter notebook
   <br/>
+  <br/>
 ... More documentation is to come in the future
