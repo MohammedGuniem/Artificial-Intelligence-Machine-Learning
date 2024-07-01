@@ -23,9 +23,11 @@ This repository includes a series of notebooks with the purpose of learning and 
   <br/>
 
 - To start working on your local environment, enter the conda environment by using the command
+  <br/>
       conda activate ml
-<br/>
+  <br/>
 - And then run the jupyter notebook service from the root folder of your project
+  <br/>
       jupyter notebook
-<br/>
+  <br/>
 ... More documentation is to come in the future
