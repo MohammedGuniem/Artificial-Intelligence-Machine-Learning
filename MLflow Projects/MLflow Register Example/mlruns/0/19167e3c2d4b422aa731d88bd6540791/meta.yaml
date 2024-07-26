@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/MOHAMMEDG/Projects/Machine-Learning/MLflow%20Projects/MLflow%20Register%20Example/mlruns/0/19167e3c2d4b422aa731d88bd6540791/artifacts
+end_time: 1722014335215
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 19167e3c2d4b422aa731d88bd6540791
+run_name: invincible-crane-241
+run_uuid: 19167e3c2d4b422aa731d88bd6540791
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722014331662
+status: 3
+tags: []
+user_id: MOHAMMEDG

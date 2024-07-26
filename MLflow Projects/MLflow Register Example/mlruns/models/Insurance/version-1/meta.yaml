@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1722013710830
+current_stage: Production
+description: null
+last_updated_timestamp: 1722014299778
+name: Insurance
+run_id: 3fed1f06c470426a8e050d8b5a5887b3
+run_link: null
+source: file:///C:/Users/MOHAMMEDG/Projects/Machine-Learning/MLflow%20Projects/MLflow%20Register%20Example/mlruns/0/3fed1f06c470426a8e050d8b5a5887b3/artifacts/model
+status: READY
+status_message: null
+storage_location: file:///C:/Users/MOHAMMEDG/Projects/Machine-Learning/MLflow%20Projects/MLflow%20Register%20Example/mlruns/0/3fed1f06c470426a8e050d8b5a5887b3/artifacts/model
+user_id: null
+version: 1

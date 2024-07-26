@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/MOHAMMEDG/Projects/Machine-Learning/MLflow%20Projects/MLflow%20Register%20Example/mlruns/0/bb84af56cb584f1cb2de972905566731/artifacts
+end_time: 1722013708528
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: bb84af56cb584f1cb2de972905566731
+run_name: abrasive-hog-523
+run_uuid: bb84af56cb584f1cb2de972905566731
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722013704763
+status: 3
+tags: []
+user_id: MOHAMMEDG

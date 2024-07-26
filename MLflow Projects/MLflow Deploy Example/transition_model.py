@@ -1,0 +1,1 @@
+client.transition_model_version_stage(name="Insurance", version=1, stage="Production")
