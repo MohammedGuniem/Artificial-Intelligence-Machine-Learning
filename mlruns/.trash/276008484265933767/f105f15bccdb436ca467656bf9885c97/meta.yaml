@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/276008484265933767/f105f15bccdb436ca467656bf9885c97/artifacts
+deleted_time: 1722111854391
+end_time: 1722111715697
+entry_point_name: ''
+experiment_id: '276008484265933767'
+lifecycle_stage: deleted
+run_id: f105f15bccdb436ca467656bf9885c97
+run_name: salty-hound-701
+run_uuid: f105f15bccdb436ca467656bf9885c97
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722111711630
+status: 3
+tags: []
+user_id: mghun

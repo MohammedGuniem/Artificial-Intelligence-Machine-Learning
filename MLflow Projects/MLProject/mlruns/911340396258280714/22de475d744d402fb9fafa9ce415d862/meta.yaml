@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/mghun/projects/Machine-Learning/MLflow%20Projects/MLProject/mlruns/911340396258280714/22de475d744d402fb9fafa9ce415d862/artifacts
+end_time: 1722111187127
+entry_point_name: ''
+experiment_id: '911340396258280714'
+lifecycle_stage: active
+run_id: 22de475d744d402fb9fafa9ce415d862
+run_name: defiant-calf-577
+run_uuid: 22de475d744d402fb9fafa9ce415d862
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1722111179530
+status: 3
+tags: []
+user_id: mghun

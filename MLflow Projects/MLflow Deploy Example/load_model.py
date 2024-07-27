@@ -2,7 +2,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.datasets import load_diabetes
 import mlflow.sklearn
 
-model_uri = "runs:/d9c325bc43a5432da9f324d62a325aa9/model"
+model_uri = "runs:/aa7d37a164914b03b59152a1a76d2f8e/model"
 # Load model
 model = mlflow.sklearn.load_model(model_uri)
 

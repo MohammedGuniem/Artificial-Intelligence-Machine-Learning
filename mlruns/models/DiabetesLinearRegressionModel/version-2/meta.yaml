@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1722111715683
+current_stage: None
+description: ''
+last_updated_timestamp: 1722111715683
+name: DiabetesLinearRegressionModel
+run_id: f105f15bccdb436ca467656bf9885c97
+run_link: ''
+source: mlflow-artifacts:/276008484265933767/f105f15bccdb436ca467656bf9885c97/artifacts/model
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/276008484265933767/f105f15bccdb436ca467656bf9885c97/artifacts/model
+user_id: null
+version: 2

@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1722110883622
+current_stage: None
+description: null
+last_updated_timestamp: 1722110883622
+name: DiabetesLinearRegressionModel
+run_id: 2d3e7657f9a144b08027f1fa5f73f17f
+run_link: null
+source: file:///C:/Users/mghun/projects/Machine-Learning/MLflow%20Projects/MLflow%20Deploy%20Example/mlruns/0/2d3e7657f9a144b08027f1fa5f73f17f/artifacts/model
+status: READY
+status_message: null
+storage_location: file:///C:/Users/mghun/projects/Machine-Learning/MLflow%20Projects/MLflow%20Deploy%20Example/mlruns/0/2d3e7657f9a144b08027f1fa5f73f17f/artifacts/model
+user_id: null
+version: 2

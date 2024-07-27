@@ -1,0 +1,9 @@
+digest: f11601d6
+name: dataset
+profile: '{"num_rows": 20, "num_elements": 60}'
+schema: '{"mlflow_colspec": [{"type": "long", "name": "experience", "required": true},
+  {"type": "long", "name": "age", "required": true}, {"type": "double", "name": "interview_score",
+  "required": true}]}'
+source: '{"tags": {"mlflow.user": "mghun", "mlflow.source.name": "train_model.py",
+  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "2188faa11bab3eeab3eb57c9b83308347e0f048f"}}'
+source_type: code

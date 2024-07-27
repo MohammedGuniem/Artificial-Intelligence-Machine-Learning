@@ -1,0 +1,27 @@
+artifact_path: model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.4
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.5.1
+mlflow_version: 2.14.3
+model_size_bytes: 585
+model_uuid: eaf8b1724c204d748cf53fe6958918eb
+run_id: 5e4e1545877e436aa350b6e4a91d2efd
+signature:
+  inputs: '[{"type": "long", "name": "experience", "required": true}, {"type": "long",
+    "name": "age", "required": true}, {"type": "double", "name": "interview_score",
+    "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1,
+    1]}}]'
+  params: null
+utc_time_created: '2024-07-27 20:15:00.116178'

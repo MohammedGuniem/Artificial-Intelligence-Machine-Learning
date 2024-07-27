@@ -10,8 +10,11 @@ X = data.data
 y = data.target
 
 # Split the data
-random_state=100
+random_state=45
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=random_state)
+
+mlflow.set_tracking_uri("http://localhost:5000")
+mlflow.set_experiment("check-localhost-connection")
 
 # Start an MLflow run
 with mlflow.start_run() as run:
