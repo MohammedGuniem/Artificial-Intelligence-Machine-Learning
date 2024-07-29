@@ -1,2 +1,8 @@
 # Ignore Jupyter Notebook checkpoints
 *.ipynb_checkpoints
+
+# Ignore all local folders og MLflow runs named mlruns and mlartifacts
+mlruns/
+**/mlruns/
+mlartifacts/
+**/mlartifacts/

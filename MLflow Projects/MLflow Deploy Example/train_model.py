@@ -14,7 +14,7 @@ random_state=45
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=random_state)
 
 mlflow.set_tracking_uri("http://localhost:5000")
-mlflow.set_experiment("check-localhost-connection")
+mlflow.set_experiment("diabetes-LR-experiment")
 
 # Start an MLflow run
 with mlflow.start_run() as run:
