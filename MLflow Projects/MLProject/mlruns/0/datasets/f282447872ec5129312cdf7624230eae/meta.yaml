@@ -1,9 +1,0 @@
-digest: 030f911f
-name: dataset
-profile: '{"num_rows": 14, "num_elements": 42}'
-schema: '{"mlflow_colspec": [{"type": "long", "name": "experience", "required": true},
-  {"type": "long", "name": "age", "required": true}, {"type": "double", "name": "interview_score",
-  "required": true}]}'
-source: '{"tags": {"mlflow.user": "MOHAMMEDG", "mlflow.source.name": "evaluate_model.py",
-  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "6981c6c0a1f50d694a22aaa6ee61e761951950c8"}}'
-source_type: code
