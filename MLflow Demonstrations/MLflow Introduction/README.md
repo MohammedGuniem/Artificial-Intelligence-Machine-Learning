@@ -15,7 +15,7 @@ In this module the following capabilitites of MLflow is demonstrated:
 - cd into this folder 'MLflow Introduction'
 - Run the mlflow traching server from this folder 'MLflow Introduction'
 ```sh
-    mlflow ui
+    mlflow ui --port 5000
 ```
 
 ## A- register_model.py
