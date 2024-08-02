@@ -13,7 +13,7 @@ In this module the following capabilitites of MLflow is demonstrated:
     pip install -U mlflow
 ```
 - cd into this folder 'MLflow Introduction'
-- Run the mlflow traching server from this folder 'MLflow Introduction'
+- Run the mlflow tracking server from this folder 'MLflow Introduction' on port 5000 or any other preferred port.
 ```sh
     mlflow ui --port 5000
 ```
