@@ -10,7 +10,7 @@ import mlflow
 mlflow.set_tracking_uri("http://localhost:5000")
 
 # Create or Set the experiment 
-mlflow.set_experiment(experiment_name="Titanic Experiments")
+mlflow.set_experiment(experiment_name="Titanic Tunning")
 
 # Tag new experiment
 mlflow.set_experiment_tag(key="version", value="1.0")
@@ -46,14 +46,18 @@ with mlflow.start_run() as run:
         'max_leaf_nodes': [10, 20, 35, 50]
     }
 
+    # Set and log random_state to reproduce results
+    random_state = 123
+    mlflow.log_param("random_state", random_state)
+
     # Create a Decision Tree classifier with random_state
-    clf = DecisionTreeClassifier(random_state=99)
+    clf = DecisionTreeClassifier(random_state=random_state)
 
     # Perform grid search with cross-validation
     cv = 5
     scoring='f1'
     # Set up GridSearchCV with random_state in the cv strategy
-    cv_strategy = KFold(n_splits=5, shuffle=True, random_state=99)
+    cv_strategy = KFold(n_splits=5, shuffle=True, random_state=random_state)
     grid_search = GridSearchCV(
         estimator=clf, 
         param_grid=param_grid,
@@ -83,7 +87,6 @@ with mlflow.start_run() as run:
         mlflow.log_param(f"{prefix}_{parameter}", value)
 
     ## Log metrics
-
     # Log the best scoring of grid search
     gs_best_score = grid_search.best_score_
     print(f"grid_search_best_{scoring}_score", gs_best_score)
