@@ -38,6 +38,27 @@ y = df['Survived'].values
 ## Start a New MLflow Run
 with mlflow.start_run() as run:
 
+    # Log the distribution of target classes in dataset
+    # Log the size of dataset
+    dataset_size = len(df)
+    print("dataset_size: ", dataset_size)
+    mlflow.log_param("dataset_size", dataset_size)
+    
+    # Log unique target classes
+    unique_target_classes = df['Survived'].unique().tolist()
+    print("unique_target_classes: ", unique_target_classes)
+    mlflow.log_param("unique_target_classes", unique_target_classes)
+
+    # Log the number of unique target classes
+    num_target_classes = df['Survived'].value_counts().tolist()
+    print("num_target_classes: ", num_target_classes)
+    mlflow.log_param("num_target_classes", num_target_classes)
+
+    # Log the percentage of unique target classes
+    percentage_target_classes = [(num_target_class / dataset_size) * 100 for num_target_class in num_target_classes]
+    print("percentage_target_classes: ", percentage_target_classes)
+    mlflow.log_param("percentage_target_classes", percentage_target_classes)
+
     # Define the tunning parameter grid
     param_grid = {
         'criterion': ['gini', 'entropy'],
@@ -48,6 +69,7 @@ with mlflow.start_run() as run:
 
     # Set and log random_state to reproduce results
     random_state = 123
+    print("random_state: ", random_state)
     mlflow.log_param("random_state", random_state)
 
     # Create a Decision Tree classifier with random_state
@@ -129,6 +151,9 @@ with mlflow.start_run() as run:
 
     # Log evaluation metrics
     mlflow.log_metrics(metrics)
+
+    ## Log the code using for tunning in artifacts
+    mlflow.log_artifact("run_model_tunning.py")
 
     # Get and log the ID of this run as parameter
     run_id = run.info.run_id
