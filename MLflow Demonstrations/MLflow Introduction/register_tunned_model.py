@@ -30,6 +30,7 @@ if len(runs) > 0:
 
     # Enable auto logging
     mlflow.sklearn.autolog(disable=False)
+    mlflow.autolog(disable=False)
 
     # Start an MLflow run explicitly
     with mlflow.start_run() as run:
@@ -67,13 +68,24 @@ if len(runs) > 0:
         dt_clf.fit(X, y)
 
         ## Register the model
+        # Make Custom model
+        custom_model = CustomSklearnModel(dt_clf)
+        # Set model name
         model_name = "TitanicDecisionTreeModel"
         # Convert data to a DataFrame for logging
         input_example = pd.DataFrame(X[0:2])
         # Log the model
+        """
         mlflow.sklearn.log_model(
             sk_model=dt_clf,
             artifact_path="artifacts",
+            input_example=input_example,
+            registered_model_name=model_name
+        )
+        """
+        mlflow.pyfunc.log_model(
+            artifact_path="artifacts",
+            python_model=custom_model,
             input_example=input_example,
             registered_model_name=model_name
         )
@@ -87,7 +99,7 @@ if len(runs) > 0:
             print(f"Deleted existing model directory: {model_uri}")
 
         # Save a custom model to local filesystem
-        custom_model = CustomSklearnModel(dt_clf)
+        
         mlflow.pyfunc.save_model(
             python_model=custom_model, 
             path=model_uri
