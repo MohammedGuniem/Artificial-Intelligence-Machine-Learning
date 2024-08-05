@@ -75,21 +75,13 @@ if len(runs) > 0:
         # Convert data to a DataFrame for logging
         input_example = pd.DataFrame(X[0:2])
         # Log the model
-        """
-        mlflow.sklearn.log_model(
-            sk_model=dt_clf,
-            artifact_path="artifacts",
-            input_example=input_example,
-            registered_model_name=model_name
-        )
-        """
         mlflow.pyfunc.log_model(
             artifact_path="artifacts",
             python_model=custom_model,
             input_example=input_example,
             registered_model_name=model_name
         )
-
+        
         # Save the model to local filesystem
         model_uri = f"local_models/{model_name}"
 
@@ -115,4 +107,3 @@ if len(runs) > 0:
         
 else:
     print("Did not find any registered runs of tunning experiments! Please run tunning first.")
-
