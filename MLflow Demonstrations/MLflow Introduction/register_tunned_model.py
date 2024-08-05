@@ -1,13 +1,21 @@
 from sklearn.tree import DecisionTreeClassifier
+from custom_model import CustomSklearnModel
 import pandas as pd
 import mlflow
+import shutil
+import os
+
 
 # Set Tracking Server
 mlflow.set_tracking_uri("http://localhost:5000")
 
+# This filter insure that we only use model with accuracy higher or equal to 0.70
+accuracy_filter = "metrics.accuracy > .70"
+
 # Search for experiment runs
 runs = mlflow.search_runs(
     experiment_names=['Titanic Tunning'], 
+    filter_string=accuracy_filter,
     order_by=["metrics.grid_search_best_f1_score DESC"],
     max_results=1
 )
@@ -15,6 +23,10 @@ runs = mlflow.search_runs(
 if len(runs) > 0:
     # Create or Set the experiment 
     mlflow.set_experiment(experiment_name="Titanic Model Building")
+
+    # Tag new experiment
+    mlflow.set_experiment_tag(key="experiment_version", value="1.0")
+    mlflow.set_experiment_tag(key="learning_type", value="classification")
 
     # Enable auto logging
     mlflow.sklearn.autolog(disable=False)
@@ -37,7 +49,7 @@ if len(runs) > 0:
             df[int_col] = df[int_col].astype('float64')
 
         # Extract features
-        X = df[['Pclass', 'male', 'Age', 'Siblings/Spouses', 'Parents/Children', 'Fare']].values
+        X = df[['Pclass', 'male', 'Age', 'Siblings/Spouses', 'Parents/Children', 'Fare']]
         # Extract corresponding targets
         y = df['Survived'].values
 
@@ -65,7 +77,22 @@ if len(runs) > 0:
             input_example=input_example,
             registered_model_name=model_name
         )
-        
+
+        # Save the model to local filesystem
+        model_uri = f"local_models/{model_name}"
+
+        # Check if the model directory exists on local filesystem and delete it if it does
+        if os.path.exists(model_uri):
+            shutil.rmtree(model_uri)
+            print(f"Deleted existing model directory: {model_uri}")
+
+        # Save a custom model to local filesystem
+        custom_model = CustomSklearnModel(dt_clf)
+        mlflow.pyfunc.save_model(
+            python_model=custom_model, 
+            path=model_uri
+        )
+        mlflow.log_artifact(model_uri)
         
         ## Log the training code in artifacts
         # List of files to log as artifacts
@@ -73,7 +100,7 @@ if len(runs) > 0:
 
         for artifact_file in artifact_files:
             mlflow.log_artifact(artifact_file)
-
+        
 else:
     print("Did not find any registered runs of tunning experiments! Please run tunning first.")
 

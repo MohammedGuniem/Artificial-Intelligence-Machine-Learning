@@ -1,6 +1,6 @@
-import mlflow
 from mlflow.tracking import MlflowClient
 import pandas as pd
+import mlflow
 
 # Set the tracking URI to your MLflow server or leave it default for local tracking
 mlflow.set_tracking_uri("http://localhost:5000")
@@ -32,16 +32,18 @@ try:
     # Prepare some sample input data (example)
     # Replace this with your actual input data
     input_data = pd.DataFrame({
-        "Pclass": [3.0],
-        "male": [1.0],
-        "Age": [22.0],
-        "Siblings/Spouses": [1.0],
-        "Parents/Children": [0.0],
-        "Fare": [7.25]
+        "Pclass": [3.0, 3.0],
+        "male": [1.0, 0.0],
+        "Age": [22.0, 22.0],
+        "Siblings/Spouses": [1.0, 1.0],
+        "Parents/Children": [0.0, 1.0],
+        "Fare": [7.25, 7.25]
     })
+    print("Predicting for: ")
+    print(input_data)
 
     # Make predictions
-    predictions = model.predict(input_data.values)
+    predictions = model.predict(input_data)
     print(f"Predictions: {predictions}")
 
 except Exception as e:

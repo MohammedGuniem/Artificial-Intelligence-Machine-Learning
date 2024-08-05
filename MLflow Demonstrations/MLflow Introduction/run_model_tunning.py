@@ -13,7 +13,8 @@ mlflow.set_tracking_uri("http://localhost:5000")
 mlflow.set_experiment(experiment_name="Titanic Tunning")
 
 # Tag new experiment
-mlflow.set_experiment_tag(key="version", value="1.0")
+mlflow.set_experiment_tag(key="experiment_version", value="1.0")
+mlflow.set_experiment_tag(key="learning_type", value="classification")
 
 # You can set auto logging for all metrics by using
 #mlflow.autolog()
