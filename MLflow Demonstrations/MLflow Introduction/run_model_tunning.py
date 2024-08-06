@@ -1,9 +1,8 @@
 from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score, confusion_matrix
-from sklearn.model_selection import train_test_split, GridSearchCV, cross_val_predict, KFold
+from sklearn.model_selection import GridSearchCV, cross_val_predict, KFold
 from sklearn.tree import DecisionTreeClassifier
 import mlflow.sklearn
 import pandas as pd
-import numpy as np
 import mlflow
 
 # Set Tracking Server

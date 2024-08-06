@@ -74,9 +74,9 @@ if len(runs) > 0:
         model_name = "TitanicDecisionTreeModel"
         # Convert data to a DataFrame for logging
         input_example = pd.DataFrame(X[0:2])
-        # Log the model
+        # Log and register the tunned model
         mlflow.pyfunc.log_model(
-            artifact_path="artifacts",
+            artifact_path="model",
             python_model=custom_model,
             input_example=input_example,
             registered_model_name=model_name
@@ -100,7 +100,14 @@ if len(runs) > 0:
         
         ## Log the training code in artifacts
         # List of files to log as artifacts
-        artifact_files = ["run_model_tunning.py", "register_tunned_model.py"]
+        artifact_files = [
+            "README.md",
+            "run_model_tunning.py", 
+            "custom_model.py",
+            "register_tunned_model.py", 
+            "predict_using_latest_model.py",
+            "predict_using_local_model.py",
+        ]
 
         for artifact_file in artifact_files:
             mlflow.log_artifact(artifact_file)
