@@ -9,7 +9,7 @@ import mlflow
 mlflow.set_tracking_uri("http://localhost:5000")
 
 # Create or Set the experiment 
-mlflow.set_experiment(experiment_name="Titanic Tunning")
+mlflow.set_experiment(experiment_name="Titanic Tuning")
 
 # Tag new experiment
 mlflow.set_experiment_tag(key="experiment_version", value="1.0")
@@ -59,7 +59,7 @@ with mlflow.start_run() as run:
     print("percentage_target_classes: ", percentage_target_classes)
     mlflow.log_param("percentage_target_classes", percentage_target_classes)
 
-    # Define the tunning parameter grid
+    # Define the tuning parameter grid
     param_grid = {
         'criterion': ['gini', 'entropy'],
         'max_depth': [5, 15, 25, 35, 45],
@@ -91,19 +91,19 @@ with mlflow.start_run() as run:
     grid_search.fit(X, y)
 
     ## Log Parameters
-    # Log the parameter cv that stores how many k-fold of data the tunning performed on
+    # Log the parameter cv that stores how many k-fold of data the tuning performed on
     print("cross_validation_splits: ", cv)
     mlflow.log_param("cross_validation_splits", cv)
     
-    # Log the configured tunning parameters
+    # Log the configured tuning parameters
     for parameter, value in param_grid.items():
         print(f"{parameter}: ", value)
     mlflow.log_params(param_grid)
 
-    # Get the best tunning parameters from grid search
+    # Get the best tuning parameters from grid search
     best_params = grid_search.best_params_
-    # Log the best tunning parameters with prefix "optimal_tunned_"
-    prefix = "optimal_tunned"
+    # Log the best tuning parameters with prefix "optimal_tuned_"
+    prefix = "optimal_tuned"
     for parameter, value in best_params.items():
         print(f"{prefix}_{parameter}: ", value)
         mlflow.log_param(f"{prefix}_{parameter}", value)
@@ -152,8 +152,8 @@ with mlflow.start_run() as run:
     # Log evaluation metrics
     mlflow.log_metrics(metrics)
 
-    ## Log the code using for tunning in artifacts
-    mlflow.log_artifact("run_model_tunning.py")
+    ## Log the code using for tuning in artifacts
+    mlflow.log_artifact("run_model_tuning.py")
 
     # Get and log the ID of this run as parameter
     run_id = run.info.run_id

@@ -14,7 +14,7 @@ accuracy_filter = "metrics.accuracy > .70"
 
 # Search for experiment runs
 runs = mlflow.search_runs(
-    experiment_names=['Titanic Tunning'], 
+    experiment_names=['Titanic Tuning'], 
     filter_string=accuracy_filter,
     order_by=["metrics.grid_search_best_f1_score DESC"],
     max_results=1
@@ -54,13 +54,13 @@ if len(runs) > 0:
         # Extract corresponding targets
         y = df['Survived'].values
 
-        # Create a Decision Tree classifier with optimal tunned parameters of best run
+        # Create a Decision Tree classifier with optimal tuned parameters of best run
         # Also, using random_state to reproduce same model for analysis
         dt_clf = DecisionTreeClassifier(
-            criterion=optimal_run["params.optimal_tunned_criterion"],
-            max_depth=int(optimal_run["params.optimal_tunned_max_depth"]),
-            min_samples_leaf=int(optimal_run["params.optimal_tunned_min_samples_leaf"]),
-            max_leaf_nodes=int(optimal_run["params.optimal_tunned_max_leaf_nodes"]),
+            criterion=optimal_run["params.optimal_tuned_criterion"],
+            max_depth=int(optimal_run["params.optimal_tuned_max_depth"]),
+            min_samples_leaf=int(optimal_run["params.optimal_tuned_min_samples_leaf"]),
+            max_leaf_nodes=int(optimal_run["params.optimal_tuned_max_leaf_nodes"]),
             random_state=int(optimal_run["params.random_state"])
         )
 
@@ -74,7 +74,7 @@ if len(runs) > 0:
         model_name = "TitanicDecisionTreeModel"
         # Convert data to a DataFrame for logging
         input_example = pd.DataFrame(X[0:2])
-        # Log and register the tunned model
+        # Log and register the tuned model
         mlflow.pyfunc.log_model(
             artifact_path="model",
             python_model=custom_model,
@@ -102,9 +102,9 @@ if len(runs) > 0:
         # List of files to log as artifacts
         artifact_files = [
             "README.md",
-            "run_model_tunning.py", 
+            "run_model_tuning.py", 
             "custom_model.py",
-            "register_tunned_model.py", 
+            "register_tuned_model.py", 
             "predict_using_latest_model.py",
             "predict_using_local_model.py",
         ]
@@ -113,4 +113,4 @@ if len(runs) > 0:
             mlflow.log_artifact(artifact_file)
         
 else:
-    print("Did not find any registered runs of tunning experiments! Please run tunning first.")
+    print("Did not find any registered runs of tuning experiments! Please run tuning first.")
