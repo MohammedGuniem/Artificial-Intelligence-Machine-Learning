@@ -7,4 +7,4 @@ mlruns/
 mlartifacts/
 **/mlartifacts/
 *.pyc
-/MLflow Demonstrations/MLflow Introduction/local_models
+**/local_models
