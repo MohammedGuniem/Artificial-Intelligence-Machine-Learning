@@ -4,7 +4,37 @@ entry_points:
   main:
     command: "python script.py"
   model_tuning:
-    command: "python run_model_tuning.py"
+    parameters:
+      criterion: 
+        type: str
+        default: 'gini,entropy'
+      max_depth:
+        type: str
+        default: '5,15,25,35,45'
+      min_samples_leaf:
+        type: str
+        default: '1,3'
+      max_leaf_nodes:
+        type: str
+        default: '10,20,35,50'
+      random_state:
+        type: int
+        default: 123
+      cross_validation_splits:
+        type: int
+        default: 5
+      scoring:
+        type: str
+        default: f1
+    command: >
+      python run_model_tuning.py
+      --criterion {criterion}
+      --max_depth {max_depth}
+      --min_samples_leaf {min_samples_leaf}
+      --max_leaf_nodes {max_leaf_nodes}
+      --random_state {random_state}
+      --cross_validation_splits {cross_validation_splits}
+      --scoring {scoring}
   model_building:
     command: "python register_tuned_model.py"
     dependencies:

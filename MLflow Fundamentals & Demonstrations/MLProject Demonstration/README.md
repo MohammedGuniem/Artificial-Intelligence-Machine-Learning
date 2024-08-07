@@ -18,3 +18,6 @@ python script.py
 # But you will get the ml project run will not be logged to be viewed on the mlflow ui
 python .\predict_using_latest_model.py
 python .\predict_using_local_model.py 
+
+
+mlflow run . -e model_tuning
