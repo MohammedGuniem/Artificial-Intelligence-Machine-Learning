@@ -16,7 +16,7 @@ To start this repository at your local machine or environment please follow the 
   ```
   5) Create a new conda environment with the latest python version using this code
   ```sh
-    conda create --name ml python
+    conda create --name ml python=3.12.4
   ```
   6) Clone this repository to your local machine using this command
   ```sh
