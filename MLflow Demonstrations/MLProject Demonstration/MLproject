@@ -1,0 +1,11 @@
+name: ml_project_demonstration
+conda_env: conda.yaml
+entry_points:
+  main:
+    command: "python script.py"
+  model_tuning:
+    command: "python run_model_tuning.py"
+  model_building:
+    command: "python register_tuned_model.py"
+    dependencies:
+      - model_tuning

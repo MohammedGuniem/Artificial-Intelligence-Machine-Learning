@@ -1,0 +1,9 @@
+name: titanic_ml_project_env
+dependencies:
+  - python=3.12.4
+  - pandas
+  - scikit-learn
+  - mlflow
+  - pip
+  - pip:
+    - mlflow
