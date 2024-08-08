@@ -3,7 +3,7 @@ import mlflow
 import pandas as pd
 
 # Define the model name you want to load from local file system
-model_name = "TitanicDecisionTreeModel"
+model_name = "Titanic Model"
 model_uri = f"local_models/{model_name}"
 
 # Check if the model directory exists on local filesystem
