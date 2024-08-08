@@ -84,13 +84,15 @@ for tuning_name, params in tuning_config.items():
         # Create a Decision Tree classifier with random_state
         classifier = params["classifier"]
         if classifier == "logistic_regression":
-            clf = LogisticRegression(random_state=random_state, max_iter=1000)
+            clf = LogisticRegression(random_state=random_state, max_iter=10000)
         elif classifier == "decision_tree":
             clf = DecisionTreeClassifier(random_state=random_state)
         elif classifier == "random_forest":
             clf = RandomForestClassifier(random_state=random_state)
         elif classifier == "mlp_classifier":
-            clf = MLPClassifier(random_state=random_state, max_iter=1000)
+            if "hidden_layer_sizes" in param_grid:
+                param_grid["hidden_layer_sizes"] = [tuple(map(int, sizes.split("|"))) for sizes in param_grid["hidden_layer_sizes"]]
+            clf = MLPClassifier(random_state=random_state, max_iter=10000)
         mlflow.log_param("classifier", classifier)
         
         # Perform grid search with cross-validation
