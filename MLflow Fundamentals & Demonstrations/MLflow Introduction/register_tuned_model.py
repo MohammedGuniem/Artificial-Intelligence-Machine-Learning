@@ -38,6 +38,8 @@ if len(runs) > 0:
 
     # Start an MLflow run explicitly
     with mlflow.start_run() as run:
+        
+        # View the highest score of optimal grid search best f1-score
         optimal_run = runs.iloc[0]
         grid_search_best_f1_score = optimal_run["metrics.grid_search_best_f1_score"]
         print(f"Best grid_search_best_f1_score: ", grid_search_best_f1_score)

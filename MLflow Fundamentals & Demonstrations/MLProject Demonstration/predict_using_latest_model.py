@@ -9,7 +9,7 @@ mlflow.set_tracking_uri("http://localhost:5000")
 client = MlflowClient()
 
 # Define the model name you want to search for
-model_name = "TitanicDecisionTreeModel"
+model_name = "Titanic Model"
 
 # Try to get the registered model by name
 try:

@@ -40,14 +40,15 @@ X = df[['Pclass', 'male', 'Age', 'Siblings/Spouses', 'Parents/Children', 'Fare']
 # Extract corresponding targets
 y = df['Survived'].values
 
-
 with open(f"{os.path.dirname(__file__)}/tuning_config.json", "r", encoding="utf-8") as json_file:
     tuning_config = json.load(json_file)
 
 # Loop through the configured tunings and run each tuning in a separate run.
 for tuning_name, params in tuning_config.items():
+
     ## Start a New MLflow Run
     with mlflow.start_run() as run:
+        
         # Tag this run with name of the configured tuning
         mlflow.set_tag("tuning_name", tuning_name)
         print(f"Running tuning for {tuning_name}")

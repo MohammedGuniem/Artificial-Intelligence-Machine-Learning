@@ -1,5 +1,6 @@
 import mlflow
 
+
 # Activate the model tuning process using its entry point
 model_tuning = mlflow.projects.run(
     # Set the URI as the current working directory
@@ -11,7 +12,7 @@ model_tuning = mlflow.projects.run(
     # Specify an environment manager to create a new environment for the run
     env_manager="local",
     # Whether to block while waiting for a run to complete. Defaults to True.
-    synchronous=True,
+    synchronous=True
 )
 print("Status(model_tuning): ", model_tuning.get_status())
 
