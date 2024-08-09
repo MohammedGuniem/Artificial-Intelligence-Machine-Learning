@@ -10,12 +10,15 @@ In this module the following capabilitites of MLflow is demonstrated:
 # Install MLflow & Run Tracking Server Locally
 - Install/Upgrade MLflow on your local environment using pip
 ```sh
-    pip install -U mlflow
+pip install -U mlflow
 ```
 - cd into this folder 'MLflow Introduction'
+```sh
+cd '.\MLflow Fundamentals & Demonstrations\MLflow Introduction\'
+```
 - Run the mlflow tracking server from this folder 'MLflow Introduction' on port 5000 or any other preferred port.
 ```sh
-    mlflow ui --port 5000
+mlflow ui --port 5000
 ```
 
 # A- Model Tuning
