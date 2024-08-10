@@ -58,5 +58,20 @@
             "cross_validation_splits": 5,
             "scoring": "f1"
         }
+    },
+    "Titanic Support Vector Machines": {
+        "classifier": "svm_classifier",
+        "tunning_parameters": {
+            "param_grid": {
+                "C": [0.1, 10],
+                "kernel": ["linear", "rbf", "sigmoid"],
+                "gamma": ["scale", 0.001, 0.1, 1],
+                "degree": [2, 4],
+                "coef0": [0, 0.1, 1]
+            },
+            "random_state": 123,
+            "cross_validation_splits": 5,
+            "scoring": "f1"
+        }
     }
 }

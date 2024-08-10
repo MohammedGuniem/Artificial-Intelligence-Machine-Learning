@@ -4,6 +4,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.svm import SVC
 import mlflow.sklearn
 import pandas as pd
 import argparse
@@ -54,7 +55,7 @@ if __name__ == "__main__":
 
             # Tag this run with name of the configured tuning
             mlflow.set_tag("tuning_name", tuning_name)
-            print(f"Running tuning for {tuning_name}")
+            print(f">>> Running tuning for {tuning_name}")
             
             # Log the distribution of target classes in dataset
             # Log the size of dataset
@@ -97,6 +98,8 @@ if __name__ == "__main__":
                 if "hidden_layer_sizes" in param_grid:
                     param_grid["hidden_layer_sizes"] = [tuple(map(int, sizes.split("|"))) for sizes in param_grid["hidden_layer_sizes"]]
                 clf = MLPClassifier(random_state=random_state, max_iter=10000)
+            elif classifier == "svm_classifier":
+                clf = SVC(random_state=random_state)
             mlflow.log_param("classifier", classifier)
             
             # Perform grid search with cross-validation

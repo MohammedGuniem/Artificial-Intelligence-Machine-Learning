@@ -3,6 +3,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.tree import DecisionTreeClassifier
 from custom_model import CustomSklearnModel
+from sklearn.svm import SVC
 import pandas as pd
 import mlflow
 import shutil
@@ -94,6 +95,16 @@ if len(runs) > 0:
                 learning_rate=optimal_run["params.optimal_tuned_learning_rate"],
                 random_state=int(optimal_run["params.random_state"]), 
                 max_iter=10000
+            )
+        elif optimal_classifier == "svm_classifier":
+            gamma = int(optimal_run["params.optimal_tuned_gamma"])
+            clf = SVC(
+                C = float(optimal_run["params.optimal_tuned_C"]),
+                kernel = optimal_run["params.optimal_tuned_kernel"],
+                gamma = float(gamma) if gamma.count('.') == 1 or gamma.isdigit() else gamma,
+                degree = int(optimal_run["params.optimal_tuned_degree"]),
+                coef0 = float(optimal_run["params.optimal_tuned_coef0"]),
+                random_state = int(optimal_run["params.random_state"])
             )
 
         # Fit the model
