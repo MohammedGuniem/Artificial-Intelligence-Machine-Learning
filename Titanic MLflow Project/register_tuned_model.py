@@ -97,7 +97,7 @@ if len(runs) > 0:
                 max_iter=10000
             )
         elif optimal_classifier == "svm_classifier":
-            gamma = int(optimal_run["params.optimal_tuned_gamma"])
+            gamma = optimal_run["params.optimal_tuned_gamma"]
             clf = SVC(
                 C = float(optimal_run["params.optimal_tuned_C"]),
                 kernel = optimal_run["params.optimal_tuned_kernel"],
