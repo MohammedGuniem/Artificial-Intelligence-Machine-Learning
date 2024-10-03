@@ -4,3 +4,11 @@ numpy
 scikit-learn
 matplotlib
 seaborn
+transformers
+torch
+ipywidgets
+datasets
+torch
+torchvision
+torchaudio
+huggingface_hub
