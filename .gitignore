@@ -8,3 +8,7 @@ mlruns/
 **/mlruns/
 mlartifacts/
 **/mlartifacts/
+
+# ignore hugging face locally saved models
+/Hugging Face/Notebooks/models
+/Hugging Face/Notebooks/results

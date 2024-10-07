@@ -1,0 +1,16 @@
+notebook
+matplotlib
+transformers
+transformers[torch]
+torch
+ipywidgets
+datasets
+torch
+torchvision
+torchaudio
+huggingface_hub
+protobuf
+sentencepiece
+soundfile
+librosa
+sentence_transformers
