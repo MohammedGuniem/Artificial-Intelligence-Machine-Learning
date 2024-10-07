@@ -1,0 +1,6 @@
+notebook
+Pandas
+numpy
+matplotlib
+scikit-learn
+graphviz

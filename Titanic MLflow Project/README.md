@@ -11,9 +11,9 @@ In this module the following capabilitites of MLflow is demonstrated:
 # Install MLflow & Run Tracking Server Locally
 Follow the steps below to install and run the mlflow traching server locally:
 
-1) Install/Upgrade MLflow on your local environment using pip as shown
+1) Install/Upgrade the required packages and the MLflow package on your local environment using pip as shown
 ```sh
-pip install -U mlflow
+pip install -r requirements.txt
 ```
 2) cd into this folder 'Titanic MLflow Project'
 ```sh
@@ -115,7 +115,7 @@ mlflow run . --experiment-name 'Titanic MLProject'
 ```sh
 conda env list
 ```
-Pick the conda env indexed with <code>mlflow-...</code>, activate the environment and then run the scripts using python:
+* Pick the conda env indexed with <code>mlflow-...</code>, activate the environment and then run the scripts using python:
 ```sh
 conda activate mlflow-...
 ```
@@ -129,5 +129,5 @@ python register_tuned_model.py
 python predict_using_latest_model.py
 ```
 ```sh
-python python predict_using_local_model.py
+python predict_using_local_model.py
 ```
