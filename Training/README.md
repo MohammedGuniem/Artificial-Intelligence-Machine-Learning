@@ -13,7 +13,17 @@ conda create --name training python=3.12.4
 conda activate training
 ```
 
+## Navigate to this root directory
+```
+cd '.\Training\'
+```
+
 ## Install the required packages
 ```
 pip install -r requirements.txt
+```
+
+## Run jupyter notebook
+```
+jupyter notebook
 ```
