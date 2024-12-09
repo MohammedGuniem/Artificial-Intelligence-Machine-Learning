@@ -1,0 +1,16 @@
+Important Questions
+
+--> Module 1
+
+* Which type of learning involves an agent learning to interact with an environment to maximize a reward?
+- Unsupervised learning
+- Supervised learning
+- Semi-supervised learning
+- Reinforcement learning (Correct Answer)
+
+
+* Which of the following is an example of reinforcement learning?
+- A chatbot responding to customer queries
+- A robot learning to navigate a maze (Correct Answer)
+- Classifying emails as spam or not spam
+- Grouping similar documents together
