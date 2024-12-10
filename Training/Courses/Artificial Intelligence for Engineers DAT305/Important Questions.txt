@@ -14,3 +14,27 @@ Important Questions
 - A robot learning to navigate a maze (Correct Answer)
 - Classifying emails as spam or not spam
 - Grouping similar documents together
+
+* Which algorithm is commonly used for collaborative filtering in recommendation systems?
+- Apriori Algorithm
+- Decision Tree
+- Matrix Factorization (Correct Answer)
+- K-Means Clustering
+
+* Which technique is commonly used to convert categorical data into vector representations?
+- Linear regression
+- One-hot encoding (Correct Answer)
+- Gradient descent
+- Singular Value Decomposition
+
+* What is the main advantage of using matrix factorization for recommendation systems?
+- It requires a large amount of labeled data
+- It provides perfect predictions
+- It can handle sparse data effectively (Correct Answer)
+- It is the simplest algorithm to implement
+
+* What does the dot product between two word vectors represent in the context of word embeddings?
+- The length of the vectors
+- The difference between the vectors
+- The measure of similarity between the two words (Correct Answer)
+- The angle between the two vectors
