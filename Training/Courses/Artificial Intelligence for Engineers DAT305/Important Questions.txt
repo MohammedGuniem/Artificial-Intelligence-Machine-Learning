@@ -15,6 +15,8 @@ Important Questions
 - Classifying emails as spam or not spam
 - Grouping similar documents together
 
+--> Module 2
+
 * Which algorithm is commonly used for collaborative filtering in recommendation systems?
 - Apriori Algorithm
 - Decision Tree
@@ -38,3 +40,62 @@ Important Questions
 - The difference between the vectors
 - The measure of similarity between the two words (Correct Answer)
 - The angle between the two vectors
+
+--> Module 3
+
+* Which type of problem is best suited for using a Support Vector Machine (SVM)?
+- Dimensionality Reduction
+- Classification (Correct Answer)
+- Clustering
+- Regression
+
+* What is the purpose of using a kernel in Support Vector Machines?
+- To handle non-linear data (Correct Answer)
+- To normalize the data
+- To increase the training data size
+- To reduce the number of features
+
+* What does the term "generalization" mean in the context of machine learning?
+- The process of increasing the model complexity
+- The process of simplifying a model
+- The ability of a model to perform well on unseen data
+- The ability of a model to perform well on training data
+
+* Which of the following methods is used to increase the generalization of a machine learning model?
+- Regularization
+- Cross-validation
+- Increasing the number of features
+- Increasing the size of the training set (Correct Answer)
+
+--> Module 4
+
+* How are the weights in an ANN typically updated during training?
+- By setting them to fixed values
+- By randomly adjusting them after each epoch
+- By using the error calculated from the loss function (Correct Answer)
+- By using the values from the input data
+
+* What is backpropagation in the context of ANN?
+- A method for initializing weights
+- An algorithm used to update the weights based on the error (Correct Answer)
+- A way to add new layers to the network
+- A technique for forward propagation of input data
+
+* What is the purpose of the loss function in an ANN?
+- To initialize the weights
+- To measure the difference between the predicted output and the actual output (Correct Answer)
+- To determine the structure of the network
+- To decide the activation function to be used
+
+* What does the term "epoch" refer to in the training of an ANN?
+- The number of neurons in each layer
+- A single update of the weights
+- A complete pass through the entire training dataset (Correct Answer)
+- The number of layers in the network
+
+--> Module 5
+
+--> Module 6
+
+
+
