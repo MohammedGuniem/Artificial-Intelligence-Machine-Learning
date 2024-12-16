@@ -58,7 +58,7 @@ Important Questions
 * What does the term "generalization" mean in the context of machine learning?
 - The process of increasing the model complexity
 - The process of simplifying a model
-- The ability of a model to perform well on unseen data
+- The ability of a model to perform well on unseen data (Correct Answer)
 - The ability of a model to perform well on training data
 
 * Which of the following methods is used to increase the generalization of a machine learning model?
@@ -95,7 +95,73 @@ Important Questions
 
 --> Module 5
 
+* What is the role of the pooling layer in a CNN?
+- To apply activation functions
+- To increase the number of parameters in the model
+- To reduce the spatial dimensions of the input volume (Correct Answer)
+- To compute the dot product between the weights and input
+
+* Which type of pooling is most commonly used in CNNs?
+- Sum pooling
+- Average pooling
+- Min pooling
+- Max pooling (Correct Answer)
+
+* What is the "vanishing gradient problem" commonly associated with in deep learning?
+- Training deep neural networks (Correct Answer)
+- CNNs
+- Fully connected layers
+- Shallow neural networks
+
+* Which of the following is true about the cell state in an LSTM?
+- It is updated at each time step and carries long-term information (Correct Answer)
+- It is the same as the hidden state
+- It is used to compute the final output of the network
+- It does not change over time
+
+* In an autoencoder, what is the "bottleneck" layer?
+- The input layer
+- The output layer
+- The layer where the data is reconstructed
+- The layer with the smallest number of neurons (Correct Answer)
+
 --> Module 6
+
+* What is lemmatization in NLP?
+- The process of converting words to their root form (Correct Answer)
+- The process of converting all words to lowercase
+- The process of removing punctuation from text
+- The process of tokenizing the text
+
+* What does the "Term Frequency" (TF) component of TF-IDF measure?
+- The importance of a word in the entire dataset
+- The rarity of a word across all documents
+- The length of the document
+- The frequency of a term in a document (Correct Answer)
+
+* What does the term "word embedding" refer to in vector representation?
+- A vector that represents an entire document
+- A vector that represents the frequency of words
+- A vector that represents a single word (Correct Answer)
+- A matrix that represents a set of sentences
+
+* What is the main innovation introduced by the Transformer model in NLP?
+- Deep belief networks for better feature learning
+- Attention mechanisms that allow models to focus on different parts of the input (Correct Answer)
+- Convolutional layers for feature extraction
+- Recurrent connections for processing sequences
+
+* In the Transformer model, what is the purpose of the multi-head attention mechanism?
+- To increase the depth of the network
+- To apply multiple attention mechanisms in parallel to capture different types of relationships (Correct Answer)
+- To reduce the computational cost of the attention mechanism
+- To normalize the attention scores
+
+* What is a key difference between BERT (Bidirectional Encoder Representations from Transformers) and the original Transformer architecture?
+- BERT relies on convolutional layers for processing text
+- BERT is used only for image processing tasks
+- BERT uses only the encoder part of the Transformer (Correct Answer)
+- BERT uses recurrent layers instead of attention layers
 
 
 
