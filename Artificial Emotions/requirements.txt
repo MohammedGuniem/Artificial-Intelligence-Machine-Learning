@@ -9,3 +9,5 @@ tensorflow
 transformers
 tf-keras
 torch
+SentenceTransformer
+huggingface_hub[hf_xet]
