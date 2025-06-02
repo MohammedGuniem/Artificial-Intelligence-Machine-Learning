@@ -1,0 +1,2 @@
+linear_regression,decision_tree,random_forest,neural_network
+0.165,0.334,0.429,0.554
